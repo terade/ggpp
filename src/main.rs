@@ -115,7 +115,7 @@ fn main() {
         }
 
         gh_pfp
-            .to_image(DEFAULT_SQUARE_LENGTH)
+            .to_image(DEFAULT_SQUARE_LENGTH * args.upscale as u32)
             .save(output_file_names.get(current_count).unwrap())
             .unwrap();
     }
